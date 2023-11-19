@@ -1,0 +1,257 @@
+\documentclass{beamer}
+
+\usepackage{graphicx}
+\usepackage{mathpazo}
+\usepackage{hyperref}
+\usepackage{multimedia}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{bbm}
+
+\usepackage{listings}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+    \end{centering}
+}
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+% beaver, wolverine, crane
+
+%\usepackage[authoryear,round]{natbib}
+
+
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+    \end{centering}
+}
+
+
+\title{Beginner tips from an unskilled user for using Git and Github for Version Control}
+\author{Lars Nesheim }
+\date{November 2023}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{What is Git?}
+\begin{itemize}
+\item \textcolor{red}{\textbf{Git}} is a program for simple, efficient \textcolor{red}{\textbf{version control}}:
+\begin{itemize}
+\item Records changes to files, sets of files.
+\item Enables efficient management and control of multiple versions of files.
+\end{itemize}
+\item Can be used to:
+\begin{itemize}
+\item Compare \textcolor{red}{\textbf{multiple versions, track changes}} over time, track changes by specific users.
+\item Store archive or \textcolor{red}{\textbf{``repository"}} locally, centrally, or \textcolor{red}{\textbf{in cloud}} (e.g. Github).
+\item Archive specific versions and/or revert to previous versions.
+\item Synchronise versions across \textcolor{red}{\textbf{multiple computers and multiple users.}}
+\item Create \textcolor{red}{\textbf{branches}} of projects.
+\end{itemize}
+\item Works on Linux, Mac, Windows.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What is Github?}
+\begin{itemize}
+\item Github is a \textcolor{red}{\textbf{cloud platform}} owned by Microsoft.
+\item Allows for cloud storage of Git repositories.
+\begin{itemize}
+\item Can be accessed from any computer with web access.
+\item Store project repository in cloud.
+\item Can easily synchronise with local computers. 
+\end{itemize}
+\item Allows for either private or public repositories.
+\item Many tools for code development, collaboration, project management.
+\item Alternatives include Bitbucket and many others.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Getting started}
+\begin{itemize}
+\item Using Git and Github for the first time.
+\begin{enumerate}
+\item Install Git (if necessary).
+\begin{itemize}
+\item By default, Git is installed on Linux and Mac (not sure about Windows).
+\item On Windows, can download/install Github Desktop.
+\end{itemize}
+\item Setup Github account.
+\begin{itemize}
+\item Free personal account has most basic tools/services.
+\item UCL account has additional benefits/tools/services.
+\end{itemize}
+\item Set up secure access to Github.
+\begin{itemize}
+\item  Use ssh keys.
+\item These function like a password to enable password protected access.
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Starting a project}
+\begin{enumerate}
+\item Create repository on Github
+\item Clone repository from Github to local computer.
+\item Add, delete, or edit files on local computer.
+\item Commit changes (with a brief message describing changes).
+\item Push changes from local computer to repository. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Work on existing project}
+\begin{enumerate}
+\item Assume local computer already contains copy of remote repository.
+\item If necessary, commit any changes to files on local computer.
+\item Pull files from remote repository.
+\begin{itemize}
+\item Option to switch to a different branch.
+\end{itemize}
+\item If any conflicts, resolve them, commit changes (with message), and push to remote repository.
+\item Add, delete, or edit files on local computer.
+\begin{itemize}
+\item Option to create new branch.
+\end{itemize}
+\item Commit further changes (with a brief message).
+\item Push changes from local computer to repository. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Getting started}
+\begin{itemize}
+\item If desired, download
+\href{https://desktop.github.com}{\textcolor{blue}{\textbf{Github Desktop}}}.
+\item Setup a \href{https://github.com}{\textcolor{blue}{\textbf{Github account}}}.
+\item Setup secure access.
+\begin{enumerate}
+\item Generate \textbf{ssh key} and add to your computer's \textbf{ssh-agent}. 
+\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent}{\textcolor{blue}{\textbf{Instructions}}}.
+\item Add the ssh key to your Github account. 
+\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account}{\textcolor{blue}{\textbf{Instructions}}}.
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Starting a project}
+\begin{itemize}
+\item Create repository on Github (name, pubilc/private, readme, template, license). Edit readme.
+\item Clone repository from Github to local computer.
+\begin{lstlisting}
+git clone git@github.com:larsnesheim/Github.git
+\end{lstlisting}
+\begin{itemize}
+\item \textbf{command:} \lstinline{git clone} 
+\item \textbf{address:} \lstinline{git@github.com:larsnesheim/Github.git} 
+\item All files in repository are copied to local computer in new directory ``Github".
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Starting a project: continued}
+\begin{table}[htp]
+\caption{Other commands}
+\begin{center}
+\begin{tabular}{ll}
+\hline
+\lstinline{git status} & Check on current status. \\
+\lstinline{git add newfile.txt} & Add new file to project. \\
+\lstinline{git rm oldfile.txt} & Remove old file. \\
+\lstinline{git commit -a -m "Describe changes made."} & Commit changes. \\
+\lstinline{git push} & Copy changes to remote repository.
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}%
+\begin{itemize}
+\item \textbf{Final two steps (1) commit, 2) push) are crucial.}
+\end{itemize}
+%\begin{tabular}{cc}
+%Command & Description \\
+%\lstinline{git status} & Check on current status. \\
+%\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Work on existing project}
+\begin{itemize}
+\item \lstinline{git pull} to copy most recent version of repository from remote to local computer.
+\item \lstinline{git checkout -b new\_branch} to create a new branch and switch to it.
+\item \lstinline{git checkout main} to switch to main branch.
+\item \lstinline{git push -u origin new\_branch} to copy new branch to remote repository.
+\item \lstinline{git checkout --track origin/branch} to switch to and track ``branch".
+\item \lstinline{git merge branch\_to\_merge} to merge current branch and ``branch\_to\_merge".
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Things to always avoid}
+\begin{itemize}
+\item Never copy large data files to remote repository.
+\item Never copy confidential data to remote repository.
+\item Never copy passwords, API tokens, or other confidential information to remote repository.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Other topics}
+\begin{itemize}
+\item Using Github desktop.
+\item Using Github.
+\item Using submodules.
+\item INntegrated with Matlab, RStudio, many IDE's, Overleaf.
+\item Finding help:
+\begin{itemize}
+\item Search on internet.
+\item  \href{https://docs.github.com/en/get-started/using-git/about-git}{\textcolor{blue}{\textbf{Github documentation}}}.
+\item \href{https://git-scm.com/doc}{\textcolor{blue}{\textbf{Git documentation}}}.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
